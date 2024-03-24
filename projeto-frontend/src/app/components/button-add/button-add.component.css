@@ -1,0 +1,9 @@
+button {
+    width: 100px;
+    background-color: rgb(141, 240, 148);
+    transition: background-color .3s ease-in;
+}
+
+button:hover {
+    background-color: rgb(140, 216, 145);
+}

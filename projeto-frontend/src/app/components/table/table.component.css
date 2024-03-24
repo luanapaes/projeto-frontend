@@ -1,0 +1,33 @@
+table {
+    margin-top: 40px;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 8px 16px;
+    text-align: left;
+}
+
+th {
+    font-weight: bold;
+    border-bottom: 1.5px solid #ABABAB;
+    color: #392664;
+    font-size: 1.3em;
+}
+
+/* Borda inferior em todas as células */
+td {
+    border-bottom: 1px solid #ddd;
+}
+
+td:nth-child(even){
+    background-color: #beafe0;
+    color: rgb(32, 12, 79);
+}
+
+td:nth-child(5){
+    display: flex;
+    justify-content: space-around;
+}
