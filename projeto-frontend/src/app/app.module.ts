@@ -9,6 +9,7 @@ import { ButtonDeleteComponent } from './components/button-delete/button-delete.
 import { ButtonAddComponent } from './components/button-add/button-add.component';
 
 import { FormsModule } from '@angular/forms';
+import { MatDialogModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
