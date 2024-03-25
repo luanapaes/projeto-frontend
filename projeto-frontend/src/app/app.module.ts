@@ -8,17 +8,20 @@ import { ButtonEditComponent } from './components/button-edit/button-edit.compon
 import { ButtonDeleteComponent } from './components/button-delete/button-delete.component';
 import { ButtonAddComponent } from './components/button-add/button-add.component';
 
+import { FormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
     TableComponent,
     ButtonEditComponent,
     ButtonDeleteComponent,
-    ButtonAddComponent
+    ButtonAddComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
