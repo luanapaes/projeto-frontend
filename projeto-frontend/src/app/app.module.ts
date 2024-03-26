@@ -9,7 +9,11 @@ import { ButtonDeleteComponent } from './components/button-delete/button-delete.
 import { ButtonAddComponent } from './components/button-add/button-add.component';
 
 import { FormsModule } from '@angular/forms';
-import { MatDialogModule } from '@angular/material';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DialogOverviewComponent } from './components/dialog-overview/dialog-overview.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field'; // Importe este módulo
 
 @NgModule({
   declarations: [
@@ -18,12 +22,17 @@ import { MatDialogModule } from '@angular/material';
     ButtonEditComponent,
     ButtonDeleteComponent,
     ButtonAddComponent,
+    DialogOverviewComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    MatDialogModule
+    MatDialogModule,
+    BrowserAnimationsModule,
+    MatFormFieldModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]
