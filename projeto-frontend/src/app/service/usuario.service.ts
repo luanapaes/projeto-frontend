@@ -14,7 +14,7 @@ export class UsuarioService {
     constructor(private httpClient: HttpClient) {
     }
 
-    obterUsuarios() {
+    obterUsuarios(){
         return this.httpClient.get<Usuario[]>(this.url);
     }
 
