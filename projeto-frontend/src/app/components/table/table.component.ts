@@ -10,14 +10,14 @@ export class TableComponent implements OnInit {
     {
       id: "1",
       nome: "Luana",
-      usuario: "luanaf0",
+      login: "luanaf0",
       email: "luana@gmail.com",
       senha: "102030"
     },
     {
       id: "2",
       nome: "Clara",
-      usuario: "claraf0",
+      login: "claraf0",
       email: "clara@gmail.com",
       senha: "54321"
     },

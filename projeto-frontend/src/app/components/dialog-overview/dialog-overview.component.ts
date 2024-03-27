@@ -1,5 +1,8 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { MatDialogRef } from '@angular/material/dialog';
+import { Usuario } from 'src/app/models/usuario.model';
+import { UsuarioService } from 'src/app/service/usuario.service';
 
 @Component({
   selector: 'app-dialog-overview',
@@ -8,14 +11,33 @@ import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dial
 })
 export class DialogOverviewComponent implements OnInit {
 
-  constructor(public dialogRef: MatDialogRef<DialogOverviewComponent>) { }
+  usuario: Usuario = {
+    nome: '',
+    login: '',
+    email: '',
+    senha: ''
+  }
 
-  ngOnInit(): void {
+  constructor(
+    public usuarioService: UsuarioService,
+    public dialogRef: MatDialogRef<DialogOverviewComponent>,
+    private http: HttpClient) { }
+
+  ngOnInit() {
+    import('../../service/usuario.service').then(m => m.UsuarioService); // Carregue o módulo
+  }
+
+  cadastrarUsuario(usuario: Usuario) {
+    this.usuarioService.cadastrarUsuario(usuario).subscribe(() => {
+      console.log('Cadastro realizado com sucesso!');
+    })
   }
 
   cancel(): void {
     this.dialogRef.close();
   }
-
-
 }
+
+
+
+

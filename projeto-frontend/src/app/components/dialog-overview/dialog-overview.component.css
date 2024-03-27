@@ -3,3 +3,24 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+.form-field-width {
+    width: 100%;  
+}
+
+.acoes{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.acoes button{
+    width: auto;
+    border: 1px solid indigo;
+    padding: 0 5px;
+    transition: background-color .3s ease-in;
+}
+
+.acoes button:hover{
+    background-color: rgb(194, 164, 216);
+}

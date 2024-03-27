@@ -1,14 +1,43 @@
-<div>
+<!-- <div>
     <div mat-dialog-content>
         <h1>Cadastrar usuário</h1>
-        <mat-form-field>
-            <mat-label>Input</mat-label>
-            <input matInput>
-        </mat-form-field>
     </div>
 
     <div mat-dialog-actions>
         <button mat-button (click)="cancel()">cancelar</button>
         <button mat-button>cadastrar</button>
     </div>
+</div> -->
+
+<div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="start start" fxFill fxLayoutGap="3rem" class="dialog">
+    <form>
+        <div fxFlex="70" class="childFormContentDividerWidth">
+            <div fxLayout="column" fxLayoutAlign="space-between start" fxFill fxLayoutGap="3rem">
+                <div fxLayout="column" fxLayoutAlign="space-between center" fxFill fxLayoutGap="2rem">
+                    <mat-form-field appearance="fill" color="accent" class="form-field-width">
+                        <mat-label>Nome</mat-label>
+                        <input matInput placeholder="First Name" class="input" floatLabel="always" [(ngModel)]="usuario.nome" [ngModelOptions]="{standalone: true}">
+                    </mat-form-field>
+                    <mat-form-field appearance="fill" color="accent" class="form-field-width">
+                        <mat-label>Usuário</mat-label>
+                        <input matInput placeholder="Usuario" [(ngModel)]="usuario.login" [ngModelOptions]="{standalone: true}"/>
+                    </mat-form-field>
+                </div>
+                <div fxLayout="column" fxLayoutAlign="space-between center" fxFill fxLayoutGap="2rem">
+                    <mat-form-field appearance="fill" color="accent" class="form-field-width">
+                        <mat-label>E-mail</mat-label>
+                        <input matInput placeholder="Email" [(ngModel)]="usuario.email" [ngModelOptions]="{standalone: true}"/>
+                    </mat-form-field>
+                    <mat-form-field appearance="fill" color="accent" class="form-field-width">
+                        <mat-label>Senha</mat-label>
+                        <input matInput placeholder="Senha" [(ngModel)]="usuario.senha" [ngModelOptions]="{standalone: true}"/>
+                    </mat-form-field>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<div mat-dialog-actions class="acoes">
+    <button mat-button (click)="cancel()">Cancelar</button>
+    <button mat-button type="submit" (click)="cadastrarUsuario(usuario)">Cadastrar</button>
 </div>

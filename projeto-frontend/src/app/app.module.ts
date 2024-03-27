@@ -8,12 +8,17 @@ import { ButtonEditComponent } from './components/button-edit/button-edit.compon
 import { ButtonDeleteComponent } from './components/button-delete/button-delete.component';
 import { ButtonAddComponent } from './components/button-add/button-add.component';
 
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DialogOverviewComponent } from './components/dialog-overview/dialog-overview.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field'; // Importe este módulo
+import { MatNativeDateModule } from '@angular/material/core';
+
+import { HttpClientModule, HttpClient} from '@angular/common/http';
+import { CommonModule } from '@angular/common';
+
 
 @NgModule({
   declarations: [
@@ -32,7 +37,11 @@ import { MatFormFieldModule } from '@angular/material/form-field'; // Importe es
     BrowserAnimationsModule,
     MatFormFieldModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatNativeDateModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
