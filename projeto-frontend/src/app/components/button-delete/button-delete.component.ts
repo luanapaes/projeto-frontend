@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Usuario } from 'src/app/models/usuario.model';
+import { UsuarioService } from 'src/app/service/usuario.service';
 
 @Component({
   selector: 'app-button-delete',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ButtonDeleteComponent implements OnInit {
 
-  constructor() { }
+  constructor(public usuarioService: UsuarioService) { }
 
   ngOnInit(): void {
   }
+
+  // deletarUsuario(id: string){
+  //   this.usuarioService.excluirUsuario(id).subscribe()
+  // } // não usei a função aqui, usei direto na tabela.
 
 }

@@ -1,4 +1,4 @@
-<div class="table-container">
+<div class="table-container" *ngIf="usuarios.length > 0; else tabelavazia">
         <table>
             <thead>
                 <tr>
@@ -17,11 +17,13 @@
                     <td>{{ usuario.email }}</td>
                     <td>{{ usuario.senha }}</td>
                     <td>
-                        <app-button-edit></app-button-edit>
-                        <app-button-delete></app-button-delete>
+                        <app-button-edit (click)="editarUsuario(usuario)"></app-button-edit>
+                        <app-button-delete (click)="deletarUsuario(usuario)"></app-button-delete>
                         
                     </td>
                 </tr>
             </tbody>
         </table>
 </div>
+<ng-template #tabelavazia>
+    <p class="else-msg">Nenhum usuário cadastrado.</p></ng-template>

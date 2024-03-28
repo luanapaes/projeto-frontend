@@ -31,7 +31,7 @@ export class UsuarioService {
         return this.httpClient.put<Usuario>(`${this.url}/${id}`, usuario); // Inclua 'Usuario' como segundo argumento
     }
 
-    excluirPessoa(id: string) {
+    excluirUsuario(id: string) {
         return this.httpClient.delete<void>(`${this.url}/${id}`);
     }
 
